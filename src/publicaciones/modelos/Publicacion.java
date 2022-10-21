@@ -8,6 +8,7 @@ package publicaciones.modelos;
 import autores.modelos.Profesor;
 import idiomas.modelos.Idioma;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import lugares.modelos.Lugar;
 import palabrasclaves.modelos.PalabraClave;
@@ -113,7 +114,35 @@ public class Publicacion {
         this.lugar = lugar;
     }
     
-    
+    public void mostrar(){
+        
+//        Título: Título 5
+//        Autor: Apellido40, Nombre40
+//        Fecha de publicación: 24/06/2020
+//        Tipo: Tipo 5
+//        Idioma: Idioma 3
+//        Lugar: Lugar 5
+//        Palabras claves
+//        ---------------
+//        PalabraClave2
+//        PalabraClave3
+//        PalabraClave4
+//        Enlace: Enlace 5
+//        Resumen: Resumen 5
+        System.out.println("Titulo: " + this.titulo);
+        System.out.println("Autor: " + this.profesor.getNombres() +", " + this.profesor.getApellidos());
+        System.out.println("Fecha de publicación: "+this.fechaDePublicacion.getDayOfMonth()+"/"+this.fechaDePublicacion.getMonth()+"/"+this.fechaDePublicacion.getYear());
+        System.out.println("Tipo : " +this.tipo);
+        System.out.println("Idioma: "+this.idioma);
+        System.out.println("Lugar: "+this.lugar);
+        System.out.println("Palabras claves");
+        for (PalabraClave palabra : palabraclave){
+            System.out.println(this.palabraclave);
+        }   
+        System.out.println("Enlace: "+this.enlace);
+        System.out.println("Resumen: "+ this.resumen);
+
+    }
     
     
     
