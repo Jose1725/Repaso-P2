@@ -6,6 +6,7 @@
 package publicaciones.modelos;
 
 import autores.modelos.Profesor;
+import grupos.modelos.MiembroEnGrupo;
 import idiomas.modelos.Idioma;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,8 +31,11 @@ public class Publicacion {
     private Lugar lugar;
     
     private Profesor profesor;
+    
+    
+    private MiembroEnGrupo miembroengrupo;
 
-    public Publicacion(String titulo, LocalDate fechaDePublicacion, String enlace, String resumen, Tipo tipo, Idioma idioma, Lugar lugar, Profesor profesor) {
+    public Publicacion(String titulo, LocalDate fechaDePublicacion, String enlace, String resumen, Tipo tipo, Idioma idioma, Lugar lugar, Profesor profesor, MiembroEnGrupo miembroengrupo) {
         this.titulo = titulo;
         this.fechaDePublicacion = fechaDePublicacion;
         this.enlace = enlace;
@@ -40,7 +44,11 @@ public class Publicacion {
         this.idioma = idioma;
         this.lugar = lugar;
         this.profesor = profesor;
+        this.miembroengrupo = miembroengrupo;
     }
+    
+
+   
 
     public Profesor getProfesor() {
         return profesor;
@@ -142,6 +150,14 @@ public class Publicacion {
         System.out.println("Enlace: "+this.enlace);
         System.out.println("Resumen: "+ this.resumen);
 
+    }
+
+    public MiembroEnGrupo getMiembroengrupo() {
+        return miembroengrupo;
+    }
+
+    public void setMiembroengrupo(MiembroEnGrupo miembroengrupo) {
+        this.miembroengrupo = miembroengrupo;
     }
     
     
