@@ -10,7 +10,7 @@ package autores.modelos;
  * @author Usuario
  */
 public enum Cargo {
-    Titular, Asociado, Adjunto, JTP , ADG;
+    TITULAR, ASOCIADO, ADJUNTO, JTP , ADG;
     
 //    TITULAR("Titular"), ASOCIADO("Asociado"), ADJUNTO("Adjunto"), JTP("JTP"), ADG("ADG");
 

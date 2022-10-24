@@ -17,7 +17,7 @@ public class Grupo {
     private String nombre;
     private String descripcion;
     
-    private ArrayList<Profesor> profesor = new ArrayList<>();
+    private ArrayList<MiembroEnGrupo> miembroengrupo = new ArrayList<>();
     
     
     
@@ -46,14 +46,15 @@ public class Grupo {
         this.nombre = nombre;
     }
 
-    public ArrayList<Profesor> getProfesor() {
-        return profesor;
+    public ArrayList<MiembroEnGrupo> getMiembroengrupo() {
+        return miembroengrupo;
     }
 
-    public void setProfesor(ArrayList<Profesor> profesor) {
-        this.profesor = profesor;
+    public void setMiembroengrupo(ArrayList<MiembroEnGrupo> miembroengrupo) {
+        this.miembroengrupo = miembroengrupo;
     }
-    
+
+   
     
     
     

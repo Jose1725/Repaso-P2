@@ -35,7 +35,7 @@ public class Publicacion {
     
     private MiembroEnGrupo miembroengrupo;
 
-    public Publicacion(String titulo, LocalDate fechaDePublicacion, String enlace, String resumen, Tipo tipo, Idioma idioma, Lugar lugar, Profesor profesor, MiembroEnGrupo miembroengrupo) {
+    public Publicacion(String titulo, LocalDate fechaDePublicacion, String enlace, String resumen, Tipo tipo, Idioma idioma, Lugar lugar,ArrayList<PalabraClave> palabraclave, Profesor profesor, MiembroEnGrupo miembroengrupo) {
         this.titulo = titulo;
         this.fechaDePublicacion = fechaDePublicacion;
         this.enlace = enlace;
@@ -43,10 +43,19 @@ public class Publicacion {
         this.tipo = tipo;
         this.idioma = idioma;
         this.lugar = lugar;
+        this.palabraclave = palabraclave;
         this.profesor = profesor;
         this.miembroengrupo = miembroengrupo;
     }
-    
+
+//    public Publicacion(String título_1, LocalDate of, String enlace_1, String resumen_1, Tipo tipo1) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//    
+
+    public Publicacion(String título_1, LocalDate of, String enlace_1, String resumen_1, Tipo tipo1, Idioma idioma1, Lugar lugar1, ArrayList<PalabraClave> arrayList, MiembroEnGrupo miembroEnGrupo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
    
 
