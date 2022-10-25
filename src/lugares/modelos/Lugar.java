@@ -5,6 +5,8 @@
  */
 package lugares.modelos;
 
+import java.util.Objects;
+
 /**
  *
  * @author Usuario
@@ -33,7 +35,33 @@ public class Lugar {
         this.nombre = nombre;
     }
     
-     
+     // equals y hashcode
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.nombre);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Lugar other = (Lugar) obj;
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return true;
+    }
+    
      
      
 }

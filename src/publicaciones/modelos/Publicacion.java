@@ -35,7 +35,7 @@ public class Publicacion {
     
     private MiembroEnGrupo miembroengrupo;
 
-    public Publicacion(String titulo, LocalDate fechaDePublicacion, String enlace, String resumen, Tipo tipo, Idioma idioma, Lugar lugar,ArrayList<PalabraClave> palabraclave, Profesor profesor, MiembroEnGrupo miembroengrupo) {
+    public Publicacion(String titulo, LocalDate fechaDePublicacion, String enlace, String resumen, Tipo tipo, Idioma idioma, Lugar lugar,ArrayList<PalabraClave> palabraclave, MiembroEnGrupo miembroengrupo) {
         this.titulo = titulo;
         this.fechaDePublicacion = fechaDePublicacion;
         this.enlace = enlace;
@@ -44,7 +44,7 @@ public class Publicacion {
         this.idioma = idioma;
         this.lugar = lugar;
         this.palabraclave = palabraclave;
-        this.profesor = profesor;
+//        this.profesor = profesor;
         this.miembroengrupo = miembroengrupo;
     }
 
@@ -53,9 +53,9 @@ public class Publicacion {
 //    }
 //    
 
-    public Publicacion(String título_1, LocalDate of, String enlace_1, String resumen_1, Tipo tipo1, Idioma idioma1, Lugar lugar1, ArrayList<PalabraClave> arrayList, MiembroEnGrupo miembroEnGrupo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public Publicacion(String título_1, LocalDate of, String enlace_1, String resumen_1, Tipo tipo1, Idioma idioma1, Lugar lugar1, ArrayList<PalabraClave> arrayList, MiembroEnGrupo miembroEnGrupo) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
    
 
@@ -147,7 +147,8 @@ public class Publicacion {
 //        Enlace: Enlace 5
 //        Resumen: Resumen 5
         System.out.println("Titulo: " + this.titulo);
-        System.out.println("Autor: " + this.profesor.getNombres() +", " + this.profesor.getApellidos());
+//        System.out.println("Autor: " + this.profesor.getNombres() +", " + this.profesor.getApellidos());
+        System.out.println("Autor: "+this.miembroengrupo.getProfesor());
         System.out.println("Fecha de publicación: "+this.fechaDePublicacion.getDayOfMonth()+"/"+this.fechaDePublicacion.getMonth()+"/"+this.fechaDePublicacion.getYear());
         System.out.println("Tipo : " +this.tipo);
         System.out.println("Idioma: "+this.idioma);
@@ -168,6 +169,14 @@ public class Publicacion {
     public void setMiembroengrupo(MiembroEnGrupo miembroengrupo) {
         this.miembroengrupo = miembroengrupo;
     }
+    
+    
+    // equals y hashcode
+    
+    
+    
+    
+    
     
     
     
