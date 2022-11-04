@@ -9,7 +9,7 @@ package autores.modelos;
  *
  * @author Usuario
  */
-public class Alumno {
+public class Alumno extends Autor{
     private int dni;
     private String apellidos;
     private String nombres;
@@ -21,10 +21,7 @@ public class Alumno {
     }
 
     public Alumno(int dni, String apellidos, String nombres, String clave, String cx) {
-        this.dni = dni;
-        this.apellidos = apellidos;
-        this.nombres = nombres;
-        this.clave = clave;
+        super(dni,apellidos,nombres,clave); //llama al constructor de Autor
         this.cx = cx;
     }
 
@@ -36,34 +33,42 @@ public class Alumno {
         this.cx = cx;
     }
 
+    @Override
     public int getDni() {
         return dni;
     }
 
+    @Override
     public void setDni(int dni) {
         this.dni = dni;
     }
 
+    @Override
     public String getApellidos() {
         return apellidos;
     }
 
+    @Override
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
+    @Override
     public String getNombres() {
         return nombres;
     }
 
+    @Override
     public void setNombres(String nombres) {
         this.nombres = nombres;
     }
 
+    @Override
     public String getClave() {
         return clave;
     }
 
+    @Override
     public void setClave(String clave) {
         this.clave = clave;
     }

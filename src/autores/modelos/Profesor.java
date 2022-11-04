@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author JJC
  */
-public class Profesor {
+public class Profesor extends Autor{
     private int dni;
     private String apellidos;
     private String nombres;
@@ -22,18 +22,17 @@ public class Profesor {
     
     
     private ArrayList<MiembroEnGrupo> miembroengrupo = new ArrayList<>();
+
+  
     
     
-    
+    @Override
     public void mostrar(){
         System.out.println(+dni+" "+apellidos+" "+nombres+" "+clave+" "+cargo);
     }
 
     public Profesor(int dni, String apellidos, String nombres, String clave, Cargo cargo) {
-        this.dni = dni;
-        this.apellidos = apellidos;
-        this.nombres = nombres;
-        this.clave = clave;
+       super(dni,apellidos,nombres,clave); //llama al constructor de Autor
         this.cargo = cargo;
     }
 
@@ -51,34 +50,42 @@ public class Profesor {
         this.cargo = cargo;
     }
 
+    @Override
     public int getDni() {
         return dni;
     }
 
+    @Override
     public void setDni(int dni) {
         this.dni = dni;
     }
 
+    @Override
     public String getApellidos() {
         return apellidos;
     }
 
+    @Override
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
+    @Override
     public String getNombres() {
         return nombres;
     }
 
+    @Override
     public void setNombres(String nombres) {
         this.nombres = nombres;
     }
 
+    @Override
     public String getClave() {
         return clave;
     }
 
+    @Override
     public void setClave(String clave) {
         this.clave = clave;
     }
