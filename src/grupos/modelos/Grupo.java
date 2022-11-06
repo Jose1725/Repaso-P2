@@ -1,5 +1,6 @@
 package grupos.modelos;
 
+import autores.modelos.Autor;
 import autores.modelos.Profesor;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -47,7 +48,7 @@ public class Grupo {
         this.nombre = nombre;
     }
 
-    public ArrayList<MiembroEnGrupo> getMiembroengrupo() {
+    public ArrayList<MiembroEnGrupo> verMiembros() {
         return miembroengrupo;
     }
 
@@ -82,6 +83,22 @@ public class Grupo {
         }
         return true;
     }
+    
+    
+    
+//    public void verMiembros(){
+//        System.out.println(miembroengrupo);
+//        
+//    }
+    
+    public void agregarMiembro(Autor autor, Rol rol){
+      MiembroEnGrupo miembro = new MiembroEnGrupo(rol ,autor, this);
+      
+      
+      
+      
+    }
+    
     
     
     

@@ -14,10 +14,10 @@ import java.util.ArrayList;
  * @author JJC
  */
 public class Profesor extends Autor{
-    private int dni;
-    private String apellidos;
-    private String nombres;
-    private String clave;
+//    private int dni;
+//    private String apellidos;
+//    private String nombres;
+//    private String clave;
     private Cargo cargo;
     
     
@@ -28,7 +28,10 @@ public class Profesor extends Autor{
     
     @Override
     public void mostrar(){
-        System.out.println(+dni+" "+apellidos+" "+nombres+" "+clave+" "+cargo);
+        //otra forma para mostrar
+//        System.out.println(super.getDni() + super.getApellidos() + super.getNombres() + super.getClave() + cargo);
+        super.mostrar();
+        System.out.println(cargo);
     }
 
     public Profesor(int dni, String apellidos, String nombres, String clave, Cargo cargo) {
@@ -37,10 +40,7 @@ public class Profesor extends Autor{
     }
 
 
-  
-    
-    
-    
+
 
     public Cargo getCargo() {
         return cargo;
@@ -50,46 +50,46 @@ public class Profesor extends Autor{
         this.cargo = cargo;
     }
 
-    @Override
-    public int getDni() {
-        return dni;
-    }
-
-    @Override
-    public void setDni(int dni) {
-        this.dni = dni;
-    }
-
-    @Override
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    @Override
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    @Override
-    public String getNombres() {
-        return nombres;
-    }
-
-    @Override
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    @Override
-    public String getClave() {
-        return clave;
-    }
-
-    @Override
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-    
+//    @Override
+//    public int getDni() {
+//        return dni;
+//    }
+//
+//    @Override
+//    public void setDni(int dni) {
+//        this.dni = dni;
+//    }
+//
+//    @Override
+//    public String getApellidos() {
+//        return apellidos;
+//    }
+//
+//    @Override
+//    public void setApellidos(String apellidos) {
+//        this.apellidos = apellidos;
+//    }
+//
+//    @Override
+//    public String getNombres() {
+//        return nombres;
+//    }
+//
+//    @Override
+//    public void setNombres(String nombres) {
+//        this.nombres = nombres;
+//    }
+//
+//    @Override
+//    public String getClave() {
+//        return clave;
+//    }
+//
+//    @Override
+//    public void setClave(String clave) {
+//        this.clave = clave;
+//    }
+//    
     // CARGO
 
     public ArrayList<MiembroEnGrupo> getMiembroengrupo() {
@@ -102,31 +102,31 @@ public class Profesor extends Autor{
 
   
     // equals y hashcode
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + this.dni;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Profesor other = (Profesor) obj;
-        if (this.dni != other.dni) {
-            return false;
-        }
-        return true;
-    }
+////ya no van xq extiene de Autor
+//    @Override
+//    public int hashCode() {
+//        int hash = 7;
+//        hash = 23 * hash + this.dni;
+//        return hash;
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Profesor other = (Profesor) obj;
+//        if (this.dni != other.dni) {
+//            return false;
+//        }
+//        return true;
+//    }
     
     
     

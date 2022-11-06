@@ -5,7 +5,10 @@
  */
 package grupos.modelos;
 
+import autores.modelos.Alumno;
+import autores.modelos.Autor;
 import autores.modelos.Profesor;
+import java.util.Objects;
 
 /**
  *
@@ -13,12 +16,17 @@ import autores.modelos.Profesor;
  */
 public class MiembroEnGrupo {
     private Rol rol;
-    private Profesor profesor;
+//    private Profesor profesor;
+//    private Alumno alumno;
+    private Autor autor; //Modificarla teniendo en cuenta que un alumno también puede ser autor
     private Grupo grupo;
-
-    public MiembroEnGrupo(Rol rol, Profesor profesor, Grupo grupo) {
+    
+    //public MiembroEnGrupo(Rol rol, Profesor profesor,Alumno alumno,Grupo grupo)
+    public MiembroEnGrupo(Rol rol, Autor autor,Grupo grupo) {
         this.rol = rol;
-        this.profesor = profesor;
+//        this.profesor = profesor;
+//        this.alumno = alumno;
+        this.autor = autor;
         this.grupo = grupo;
     }
 
@@ -38,15 +46,60 @@ public class MiembroEnGrupo {
         this.rol = rol;
     }
 
-    public Profesor getProfesor() {
-        return profesor;
+//    public Profesor getProfesor() {
+//        return profesor;
+//    }
+//
+//    public void setProfesor(Profesor profesor) {
+//        this.profesor = profesor;
+//    }
+//
+//    public Alumno getAlumno() {
+//        return alumno;
+//    }
+//
+//    public void setAlumno(Alumno alumno) {
+//        this.alumno = alumno;
+
+    public Autor getAutor() {
+        return autor;
     }
 
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 29 * hash + Objects.hashCode(this.autor);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass().getSuperclass() != obj.getClass().getSuperclass()) {
+            return false;
+        }
+        final MiembroEnGrupo other = (MiembroEnGrupo) obj;
+        if (!Objects.equals(this.autor, other.autor)) {
+            return false;
+        }
+        return true;
     }
     
     
     
     
-}
+    }
+    
+    
+    
+    
+

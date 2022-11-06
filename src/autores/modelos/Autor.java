@@ -5,6 +5,9 @@
  */
 package autores.modelos;
 
+import grupos.modelos.MiembroEnGrupo;
+import java.util.ArrayList;
+
 /**
  *
  * @author Usuario
@@ -17,7 +20,8 @@ public abstract class Autor {
     private String clave;
     
     
-    
+    //Asociación
+    private ArrayList<MiembroEnGrupo> miembro = new ArrayList<>();
 
     public Autor(int dni, String apellidos, String nombres, String clave) {
         this.dni = dni;
@@ -69,7 +73,7 @@ public abstract class Autor {
     public boolean equals(Object obj) {
         if (this == obj) { return true;   }
         if (obj == null) {  return false;   }
-        if (getClass() != obj.getClass()) { return false; }
+        if (getClass().getSuperclass() != obj.getClass().getSuperclass()) { return false; } //.getSuperclass() para la superclase
         /*final*/ Autor other = (Autor) obj;
 //        if (this.dni != other.dni) {
 //            return false;
