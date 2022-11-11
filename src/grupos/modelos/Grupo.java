@@ -23,9 +23,7 @@ public class Grupo {
     
     
     
-    public void mostrar(){
-        System.out.println(nombre+" "+descripcion);
-    }
+   
 
     public Grupo(String nombre, String descripcion) {
         this.nombre = nombre;
@@ -48,9 +46,10 @@ public class Grupo {
         this.nombre = nombre;
     }
 
-    public ArrayList<MiembroEnGrupo> verMiembros() {
-        return miembroengrupo;
-    }
+    //se lo manda mas abajo
+//    public ArrayList<MiembroEnGrupo> verMiembros() {
+//        return miembroengrupo;
+//    }
 
     public void setMiembroengrupo(ArrayList<MiembroEnGrupo> miembroengrupo) {
         this.miembroengrupo = miembroengrupo;
@@ -85,11 +84,17 @@ public class Grupo {
     }
     
     
-    
+     public void mostrar(){
+        System.out.println(nombre+" "+descripcion);
+    }
 //    public void verMiembros(){
 //        System.out.println(miembroengrupo);
 //        
 //    }
+        public ArrayList<MiembroEnGrupo> verMiembros() { //verMiembros de tp4
+        return miembroengrupo;
+    }
+     
     
     public void agregarMiembro(Autor autor, Rol rol){
       MiembroEnGrupo miembro = new MiembroEnGrupo(rol ,autor, this);
@@ -100,7 +105,18 @@ public class Grupo {
     }
     
     
+    public void agregarGrupo(){
+        
+    }
     
+    
+    public void quitarMiembro(Autor miembro){
+        
+    }
+    
+    public void boolean esSuperAdministradores(){
+       
+    }
     
     
 }
