@@ -83,16 +83,7 @@ public abstract class Autor {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
     
     public void mostrar(){
@@ -102,6 +93,9 @@ public abstract class Autor {
     }
     
     
+     public void agregarGrupo(){
+        
+    }
     
     
     
